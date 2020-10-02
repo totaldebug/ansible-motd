@@ -15,8 +15,7 @@ galaxy_info:
     - name: Ubuntu
       versions:
         - all
-  categories:
-    - system
   galaxy_tags:
     - motd
+    - system
 dependencies: []
