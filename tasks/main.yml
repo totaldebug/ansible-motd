@@ -10,5 +10,4 @@
   become: true
   tags:
     - motd_config
-  change_when: false
   when: motd_modification | default(false)
