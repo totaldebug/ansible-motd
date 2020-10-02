@@ -11,7 +11,7 @@ Example
 
 - host: all
   roles:
-    - motd
+    - totaldebug/motd
 ```
 
 This playbook produces the `/etc/motd' file looking like this:
