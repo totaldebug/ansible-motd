@@ -11,4 +11,3 @@
   tags:
     - motd_config
   when: motd_modification | default(false)
-    
