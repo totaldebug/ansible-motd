@@ -1,12 +1,10 @@
-motd
-====
+# motd
 
 This role will create a motd banner when logging into your server.
 
-Example
--------
+## Example
 
-```
+```yaml
 ---
 
 - host: all
@@ -16,7 +14,7 @@ Example
 
 This playbook produces the `/etc/motd' file looking like this:
 
-```
+```shell
 [root@localhost ~]# cat /etc/motd
      _              _ _     _
     / \   _ __  ___(_) |__ | | ___
@@ -32,23 +30,14 @@ This playbook produces the `/etc/motd' file looking like this:
 
 ```
 
+## Role variables
 
-Role variables
---------------
 - `motd_modification`: should the motd be modified defaults `true`
 - `motd_server_role`: What role the server plays e.g. `WebServer`
 - `motd_ascii_art`: ASCII art shown at the beginning of the motd.
 - `motd_info`: List of additional information to show under the ASCII art. Look
 into the `defaults` for an example.
 
-
-License
--------
+## License
 
 MIT
-
-
-Author
-------
-
-Steven Marks
