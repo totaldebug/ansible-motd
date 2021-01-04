@@ -3,13 +3,14 @@ name: CI
 
 on:
   push:
+    tags:
+      - 'v*'
   pull_request:
     branches:
       - master
 
 jobs:
   yaml_lint:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Getting your configuration from GitHub
@@ -19,7 +20,6 @@ jobs:
         with:
           args: yamllint .
   remark_lint:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-18.04
     steps:
       - name: Getting your configuration from GitHub
@@ -30,7 +30,6 @@ jobs:
         with:
           args: "remark --no-stdout --color --frail --use preset-lint-recommended ."
   ansible_lint:
-    if: github.event_name == 'pull_request'
     runs-on: ubuntu-latest
     steps:
       - name: Getting your configuration from GitHub
