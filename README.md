@@ -32,11 +32,21 @@ This playbook produces the `/etc/motd' file looking like this:
 
 ## Role variables
 
+- `motd_template`: modify this to change the ASCII Art or possible options
 - `motd_modification`: should the motd be modified defaults `true`
 - `motd_server_role`: What role the server plays e.g. `WebServer`
-- `motd_ascii_art`: ASCII art shown at the beginning of the motd.
 - `motd_info`: List of additional information to show under the ASCII art. Look
 into the `defaults` for an example.
+
+## Custom Templates
+
+The templates packaged with this role are meant to be very generic.
+
+If the default template does not suit your needs, you can replace it with yours. What you need to do:
+
+create a templates directory at the same level as your playbook
+create a `templates\mymotd.j2` file (just choose a different name from the default template)
+in your playbook set the var `motd_template: mymotd.j2`
 
 ## License
 
