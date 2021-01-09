@@ -7,4 +7,4 @@
     motd_server_role: Test
 
   roles:
-    - role: motd
+    - role: ansible-role-motd
