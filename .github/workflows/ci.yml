@@ -46,8 +46,6 @@ jobs:
       max-parallel: 4
       matrix:
         distro:
-          #- centos8
-          #- centos7
           - ubuntu2004
           - debian10
           - centos8
@@ -88,7 +86,7 @@ jobs:
         id: github_release
         uses: mikepenz/release-changelog-builder-action@main
         with:
-          configuration: ".github/workflows/configs/configuration.json"
+          configuration: ".github/release-changelog-builder.json"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Create Release
