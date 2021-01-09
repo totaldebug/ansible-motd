@@ -1,8 +1,3 @@
-<h1 align="center">
-  <br>
-  <a href="https://github.com/ArmynC/ArminC-AutoExec/archive/master.zip"><img src="https://arminc.ga/resources/autoexec/arminc_autoexec.png" alt="ArminC AutoExec"></a>
-</h1>
-
 <h4 align="center">An Ansible role for creating an MOTD banner when logging into yout server.</h4>
 
 <p align="center">
